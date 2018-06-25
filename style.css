@@ -30,7 +30,7 @@ li a:hover:not(.active) {
 li {
     float: left;
 }
-#mainpanel
+.mainpanel
 {
 	float: center;
 	text-align: center;
