@@ -1,9 +1,12 @@
 ul {
+	position: fixed;
+    top: 0;
+    width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #f1f1f1;
+    background-color: #264d73;
 }
 
 li a {
@@ -31,5 +34,8 @@ li {
 	float: center;
 }
 div{
-
+	padding: 100;
+}
+section{
+	background: #c6d9ec;
 }
