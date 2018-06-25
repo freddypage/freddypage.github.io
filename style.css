@@ -24,4 +24,12 @@ li a:hover:not(.active) {
 }
 li {
     display: inline;
+    float: left;
+}
+#mainpanel
+{
+	float: center;
+}
+div{
+
 }
