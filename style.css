@@ -33,8 +33,13 @@ li {
 #mainpanel
 {
 	float: center;
+	text-align: center;
 }
 div{
-	padding: 100;
-	background: #c6d9ec;
+	padding: 200;
+	
+}
+html
+{
+	background: #C6D9EC;
 }
