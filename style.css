@@ -1,4 +1,4 @@
-ul {
+#menu {
 	position: fixed;
     top: 0;
     width: 100%;
@@ -10,6 +10,10 @@ ul {
     background-color: #264d73;
 }
 
+#portrait
+{
+    position: center;
+}
 li a {
     display: block;
     color: #000;
@@ -29,6 +33,7 @@ li a:hover:not(.active) {
 }
 li {
     float: left;
+    display: inline;
 }
 .mainpanel
 {
