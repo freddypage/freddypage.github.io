@@ -1,50 +1,45 @@
-#menu {
-	position: fixed;
-    top: 0;
-    width: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    overflow: hidden;
-    background-color: #264d73;
-}
-
 #portrait
 {
     position: center;
 }
-li a {
+.center {
     display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-li a.active {
-    background-color: #4CAF50;
-    color: white;
+.clearfix {
+  overflow: auto;
 }
 
-li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-}
-li {
-    float: left;
-    display: inline;
-}
 .mainpanel
 {
 	float: center;
 	text-align: center;
 }
-div{
-	padding: 200;
-	
-}
-html
+
+.blog
 {
-	background: #C6D9EC;
+    padding: 20px;
+    float: center;
+    width: 70%;
+    height: auto;
 }
+
+.blog img
+{
+    float: left;
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+}
+
+.blog div
+{
+    margin-left: 20px;
+    float: right;
+    width: 300px;
+}
+
+
