@@ -8,7 +8,7 @@ body
     width: 100%;
     text-align: center;
     background-image: url("assets/beach.jpg");
-    height: 10vh;
+    height: 500px;
 }
 
 .headshot
@@ -72,9 +72,10 @@ body
     float: left;
 }
 
-.contact > img
+.contact img
 {
     height: 100px;
     width: 100px;
+    margin: auto;
 }
 
