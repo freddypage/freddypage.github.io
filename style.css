@@ -2,7 +2,7 @@
 {
     width: 100%;
     text-align: center;
-    background-image: url("assets\beach.jpg");
+    background-image: url("assets/beach.jpg");
 }
 
 .headshot
@@ -40,7 +40,7 @@
 .blog img
 {
     display:inline-block;
-    float: center;
+    float: left;
     height: 100px;
     width: 100px;
 }
@@ -49,7 +49,7 @@
 {
     display:inline-block;
     margin-left: 20px;
-    float: left;
+    float: center;
     width: auto;
 }
 .blog p
@@ -58,6 +58,7 @@
     margin-top:30px;
     width: 100%;
     height: auto;
+    margin-left:30px;
 }
 
 
