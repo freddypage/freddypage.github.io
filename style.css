@@ -1,6 +1,8 @@
 .portrait
 {
-    position: center;
+    width: 100%;
+    text-align: center;
+    background-image: url("assets\beach.jpg");
 }
 
 .headshot
@@ -36,23 +38,23 @@
 
 .blog img
 {
-    float: left;
+    float: center;
     height: 100px;
     width: 100px;
-    margin: 30px;
+    margin: auto;
 }
 
 .blog div
 {
     margin-left: 20px;
-    float: right;
-    width: 300px;
+    float: left;
+    width: auto;
 }
 .blog p
 {
     margin-top:30px;
     width: 100%;
-    overflow: scroll;
+    height: auto;
 }
 
 
