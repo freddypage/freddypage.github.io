@@ -53,14 +53,15 @@ body
     display:inline-block;
     width: auto;
     height: auto;
-    border-right:1px solid #13293D;
+    /*border-right:1px solid #13293D;*/
     font-size:16px;
+    margin-right:30px;
   /*  background-color: #96BBBB;*/
 }
 
 .nav > ul li:first-child
 {
-    border-left:1px solid #13293D;
+    /*border-left:1px solid #13293D;*/
 }
 
 
@@ -77,18 +78,7 @@ body
 
 .nav > ul li a:hover
 {
-    background-color:lightblue;
-    color:white;
-}
-
-.portrait
-{
-    width: 100%;
-    text-align: center;
-    background-image: url("assets/beach2.jpg");
-    height: 400px;
-    background-size: 100% 100%;
-    margin-bottom: 0px;
+    color:lightblue;
 }
 
 .headshot
@@ -100,18 +90,68 @@ body
     width: 150px;
 }
 
+.portrait
+{
+	margin: auto;
+    width: 80%;
+    text-align: center;
+    background-image: url("assets/sky2.jpg");
+    height: 400px;
+    background-size: 100% 100%;
+    margin-bottom: 0px;
+    color:black;
+     overflow:auto;
+}
+
+.name
+{
+    padding-top: 150px;
+}
+
 .about
 {
-    
+    display: block;
     margin-bottom: 100px;
-    margin-top: 50px;
+    margin-top: 100px;
+    width: 100%;
+    height:auto;   
+    overflow:auto;
 }
 
-.about h1
+.title
 {
-
-
+    text-align: left;
 }
+
+.bio
+{
+	display: inline-block;
+	float: left;
+	width:60%;
+	padding: 40px;
+}
+
+.picture
+{
+	display: inline-block;
+	float: left;
+	width:25%;
+    text-align: center;
+
+    
+}
+
+.picture img {
+    margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 150px;
+        width: 150px;
+    }
+
+
+
+
 
 .title_br
 {
@@ -122,13 +162,17 @@ body
 
 .blog
 {
-    margin-top:50px; 
+
+	padding:40px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    margin-top: 100px;
     float: center;
-   
+
+    width: auto;
     height: auto;
+    overflow: auto;
     
 }
 
@@ -179,7 +223,6 @@ body
 .contact > h1
 {
     width: auto;
-
 }
 
 
