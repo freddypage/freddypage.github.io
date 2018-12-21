@@ -7,7 +7,8 @@ body
 {
     margin:0;
     padding: 0;
-
+    font-family: Open Sans,x-locale-body,sans-serif;
+    /*proxima nova*/
 }
 
 .mainbody
@@ -41,6 +42,8 @@ body
     overflow: hidden;
     text-align: center;
     
+    border-bottom: 10px solid #68C5DB;
+    
     /*background-color: #BCD8C1;*/
 }
 
@@ -72,22 +75,13 @@ body
     text-decoration: none;
     width: auto;
     height: auto;
-    color:black;
+    color:grey;
     margin:0;
 }
 
 .nav > ul li a:hover
 {
-    color:lightblue;
-}
-
-.headshot
-{
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 150px;
-    width: 150px;
+    color:black;
 }
 
 .portrait
@@ -96,23 +90,30 @@ body
     width: 80%;
     text-align: center;
     background-image: url("assets/sky2.jpg");
-    height: 400px;
+    height: 500px;
     background-size: 100% 100%;
     margin-bottom: 0px;
     color:black;
-     overflow:auto;
+    overflow:auto;
 }
 
 .name
 {
-    padding-top: 150px;
+    padding-top: 200px;
+}
+
+.name h1
+{
+    font-size: 2.5em;
+    color: black;
 }
 
 .about
 {
+    padding-top: 100px;
     display: block;
     margin-bottom: 100px;
-    margin-top: 100px;
+    /*margin-top: 100px;*/
     width: 100%;
     height:auto;   
     overflow:auto;
@@ -128,7 +129,12 @@ body
 	display: inline-block;
 	float: left;
 	width:60%;
-	padding: 40px;
+    height: auto;
+    overflow: auto;
+	padding-left: 40px;
+    padding-right: 10px;
+    padding-top: 40px;
+    background: #FFFCF7;
 }
 
 .picture
@@ -142,7 +148,7 @@ body
 }
 
 .picture img {
-    margin-top: 50px;
+    margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
         height: 150px;
@@ -152,12 +158,27 @@ body
 
 
 
+#jobs
+{
+    padding-top: 100px;
+}
 
 .title_br
 {
-    font-size: 20px;
-    
+    display: inline-block;
+    font-size: 20px;  
     margin-bottom:50px;
+    font-style: italic;
+    width: auto;
+    overflow: auto;
+    border-bottom: 8px solid #68C5DB;
+}
+
+.title_br h1
+{
+    margin-bottom: 10px;
+    width: auto;
+    overflow: auto;
 }
 
 .blog
@@ -170,9 +191,11 @@ body
     margin-top: 100px;
     float: center;
 
-    width: auto;
+    width: 100%;
     height: auto;
     overflow: auto;
+
+    background: #FFFCF7;
     
 }
 
@@ -218,6 +241,8 @@ body
 .contact
 {
     height:auto;
+    overflow: auto;
+    width: 100%;
 }
 
 .contact > h1
@@ -227,7 +252,7 @@ body
 
 
 
-.contact > div
+.icons > div
 {
     display: inline-block;
     height: auto;
@@ -238,8 +263,25 @@ body
 
 .contact img
 {
+    float: left;
     height: 20px;
     width: 20px;
     margin: auto;
+}
+
+.icons >div:last-child
+{
+    width: 350px;
+}
+
+.icons >div:last-child input
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    padding: 5px;
+    background-color: white;
+    border: 5px solid grey;
+    float: left;
 }
 
