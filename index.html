@@ -41,6 +41,16 @@
 				x.style.display = "none";
 			}
 		}
+
+		// Open the Modal
+		function openModal() {
+		  document.getElementById('myModal').style.display = "block";
+		}
+
+		// Close the Modal
+		function closeModal() {
+		  document.getElementById('myModal').style.display = "none";
+		}
 	</script>
   </head>
   
@@ -51,7 +61,7 @@
 		<ul>
 			<li><a href="#about_me">About Me</a></li>
 			<li><a href="#jobs">Work & Projects</a></li>
-			<li><a href="">Movies List</a></li>
+			<li><a href="#movies">Movies List</a></li>
 			<li><a href="#contact_me">Contact</a></li>
 		</ul>
 	</navbar>
@@ -119,6 +129,19 @@
 					</div>
 					<p>I volunteered for a few weeks at a summer internship program offered by my High School. I was really inspired to pursue Computer Science after my experiences at the camp. Some of the kids there were really proficient at coding the little arduino motors they were given, and what was more was that they were actually enjoying it. I thought the idea of learning CS and being able to share what I know to others would be so satisfying, especially as job. I could tell that this was the future.</p>
 				</div>
+			</div>
+
+
+			<div class="title_br">
+					<h1>Favorite Movies</h1>
+			</div>
+			<div id="movies" class="row">
+			  <div class="imagebox">
+			    <img src="assets/Movie1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"/>
+			  </div>
+			  <div class="imagebox">
+			    <img src="assets/Movie2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
+			  </div>
 			</div>
 		
 			<footer class="contact" id="contact_me">
