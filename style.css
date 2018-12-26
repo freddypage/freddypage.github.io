@@ -239,19 +239,28 @@ body
 
 .row
 {
+    
+    margin-bottom: 100px;
+    padding-top: 100px;
+}
+
+.moviePics
+{
+    width: 100%;
     text-align: center;
 }
 
 .imagebox
 {
-    width: 49%;
+    width: 45%;
+    padding-right: 20px;
     display: inline-block;
+    height: auto;
 }
 
 .imagebox > img
 {
-    padding: 100px
-    width: 100px;
+    
     height: auto;
 }
 
