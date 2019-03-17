@@ -152,20 +152,16 @@
 				// });
 				// var json = JSON.stringify(object);
 
-				var formData = JSON.stringify($("#reused_form").serializeArray());
-				console.log(formdata);
-				console.log(formData);
-
 	            $.ajax({
 	                type: "POST",
-	                url: 'handler.php',
+	                url: 'https://email-server-lolke.herokuapp.com/',
 	                cors: true,
 	                secure: true,
 		          	headers: {
 		           		 'Access-Control-Allow-Origin': '*',
 		            },
 	                crossDomain: true,
-	                data: formData,
+	                data: formdata,
 	                success: after_form_submitted,
 	                dataType: 'jsonp' ,
 	                processData: false,
