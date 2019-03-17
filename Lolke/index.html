@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<navbar class="nav">
+		<ul>
+			<li><a href="#about">About</a></li>
+			<li><a href="#banner">LOLKE</a></li>
+			
+			<li><a href="#form-main">Contact Us</a></li>
+		</ul>
+	</navbar>
+
+	<div id="banner">
+		<div id="imgbox">
+			<img src="lolke_card.png"></img>
+		</div>
+	</div>
+
+	<div id="gutter">
+	</div>
+	<div id="gutter">
+	</div>
+
+	<div id="about">
+		<div class="middle-block">
+			<img src="lolke_logo.jpg"></img>
+		</div>
+		<div class="middle-block">
+			<h1>About Lolke</h1>
+			<p>We are a carpentry company. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+
+	<div id="gutter">
+	</div>
+	<div id="gutter">
+	</div>
+
+	<div id="form-main">
+	  <div id="info-text">
+	  	<h1>Contact Us</h1>
+	  	<p>You can reach us by email. Attach your ideas for specifications. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	  </div>
+	  <div id="form-div">
+
+	    <form class="montform" id="reused_form" enctype="multipart/form-data" >
+	      <p class="name">
+	      	<input name="name" type="text" class="feedback-input" required placeholder="Name" id="name" />
+	      </p>
+	      <p class="email">
+	        <input name="email" type="email" required  class="feedback-input" id="email" placeholder="Email" />
+	      </p>
+	      <p class="text">
+	        <textarea name="message" class="feedback-input" id="comment" placeholder="Message"></textarea>
+	      </p>
+	            <p class="file">
+	        <input name="image" type="file" id="file" class="feedback-input">
+	      </p>
+	            <div class="submit">
+	        <button type="submit" class="button-blue">SUBMIT</button>
+	        <div class="ease"></div>
+	      </div>
+	    </form>
+	          <div id="error_message" style="width:100%; height:100%; display:none; ">
+	                <h4>Error</h4>
+	                Sorry there was an error sending your form.
+	          </div>
+	          <div id="success_message" style="width:100%; height:100%; display:none; ">
+	          <h2>Success! Your Message was Sent Successfully.</h2>
+	          </div>
+	    </div>
+	</div>
+
+	<div id="gutter">
+	</div>
+
+	<footer>
+		<p>Lolke Carpentry</p><p>Last Updated: March 15th, 2019</p>
+	</footer>
+
+
+	 <script>
+	 document.title = "Lolke Carpentery"
+	 </script>
+
+	 <script>
+	$(function()
+	{
+	    function after_form_submitted(data)
+	    {
+	        if(data.result == 'success')
+	        {
+	            $('form#reused_form').hide();
+	            $('#success_message').show();
+	            $('#error_message').hide();
+	        }
+	        else
+	        {
+	            $('#error_message').append('<ul></ul>');
+
+	            jQuery.each(data.errors,function(key,val)
+	            {
+	                $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+	            });
+	            $('#success_message').hide();
+	            $('#error_message').show();
+
+	            //reverse the response on the button
+	            $('button[type="button"]', $form).each(function()
+	            {
+	                $btn = $(this);
+	                label = $btn.prop('orig_label');
+	                if(label)
+	                {
+	                    $btn.prop('type','submit' );
+	                    $btn.text(label);
+	                    $btn.prop('orig_label','');
+	                }
+	            });
+
+	        }//else
+	    }
+
+	    $('#reused_form').submit(function(e)
+	      {
+	        e.preventDefault();
+
+	        $form = $(this);
+	        //show some response on the button
+	        $('button[type="submit"]', $form).each(function()
+	        {
+	            $btn = $(this);
+	            $btn.prop('type','button' );
+	            $btn.prop('orig_label',$btn.text());
+	            $btn.text('Sending ...');
+	        });
+
+
+	           var formdata = new FormData(this);
+	   //           var object = {};
+				// formdata.forEach(function(value, key){
+				// 		object[key] = value;
+				// });
+				// var json = JSON.stringify(object);
+
+				var formData = JSON.stringify($("#reused_form").serializeArray());
+				console.log(formdata);
+				console.log(formData);
+
+	            $.ajax({
+	                type: "POST",
+	                url: 'handler.php',
+	                cors: true,
+	                secure: true,
+		          	headers: {
+		           		 'Access-Control-Allow-Origin': '*',
+		            },
+	                crossDomain: true,
+	                data: formData,
+	                success: after_form_submitted,
+	                dataType: 'jsonp' ,
+	                processData: false,
+	                contentType: false,
+	                cache: false
+	            });
+
+	      });
+	});
+	</script>
+
+</body>
+
+</html>
