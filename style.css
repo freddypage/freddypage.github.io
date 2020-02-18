@@ -220,6 +220,7 @@ body
     float: center;
     width: auto;
     margin-bottom: 0;
+    overflow: visible;
 }
 
 .blog > div > h1
