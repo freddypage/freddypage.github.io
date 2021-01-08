@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  	<title>Frederick Lepage</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/assets/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+	<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 400, function(){
+
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		});
+
+		function getAddress() 
+		{
+			var x = document.getElementById("gmailaddy");
+
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} 
+			else {
+				x.style.display = "none";
+			}
+		}
+
+		// Open the Modal
+		function openModal() {
+		  document.getElementById('myModal').style.display = "block";
+		}
+
+		// Close the Modal
+		function closeModal() {
+		  document.getElementById('myModal').style.display = "none";
+		}
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+  </head>
+  
+  <body> 
+  	
+
+	<navbar class="nav">
+		<ul>
+			<li><a href="#about_me">About Me</a></li>
+			<li><a href="#jobs">Work & Projects</a></li>
+			<li><a href="#movies">Movies List</a></li>
+			<li><a href="#contact_me">Contact</a></li>
+		</ul>
+	</navbar>
+
+	
+
+	
+		<div class="portrait">
+			<div class="name">
+				<h1>Frederick LePage</h1>
+				<p>Computer Science Student at McGill</p>
+			</div>
+		</div>
+
+		<div class="mainbody">
+			<div id="about_me" class="about">
+					<div class="picture">
+						<div class="title_br">
+							<h1>About Me</h1>
+						</div>
+						<img src="assets\HeadshotCircle.png"></img></div>
+					<div class="bio">
+							<p>Hello! My name is Frederick Lepage and I am a undergraduate in Computer Science set to graduate in 2020. 
+							I thoroughly enjoy coding, whether it be for work or personal projects. My main areas of expertise are front-end development
+							and databases, but Programming is a dynamic field and I love learning about all sorts of different fields and picking 
+							them up myself. Some fun facts about me: I'm trilingual (French, English and Swedish), I love to cook everything delicious 
+							in this world, I consume copious (but warranted) amounts of telivision. I'm also commited to running and any kind of sport 
+							that gets my heart pumping and my ambitions rising.</p>
+						</div>
+			</div>
+
+			<div id="jobs">
+				<div class="title_br">
+					<h1>Work & Projects</h1>
+				</div>
+
+				<div class="blog">
+					<img src="assets\cog.png"></img>
+					<div>
+						<h1>Software Developer at Maya HTT</h1>
+						<h5></h5>
+					</div>
+					<p>I had the pleasure of working with some of the best industry professionals I've met in Montreal. My internship at Maya taught 
+					me some essential facts about the relationship between clients and coders in software. Working on a larger team also motivated 
+					my appreciation for collaboration. Bouncing around ideas and solutions with colleagues influenced fantastic ideas, and working 
+					with a large codebase with many cool inhouse technologies was a lot of fun. </p>
+				</div>
+
+
+				<div class="blog">
+					<img src="assets\cog.png"></img>
+					<div>
+						<h1>Eat Smart!</h1>
+						<h5>A MEAN stack web app.</h5>
+					</div>
+					<p>Eat Smart is a full stack web app developed by me and three other team mates. The idea was to make an application that could help you better spend your money on tight budget, whether at home, or out looking for a meal at restaurant. The app was built to help learn the in's and out's of web development. 
+					The project tested everything we knew, but became a labour of love
+					that eventually grew into something we might use in our daily lives if we had a few spare dollars for maintenance. I personally developed the backend of the app, working with MongoDB, Espress and Node.js to handle
+					API calls to the server.</p>
+				</div>
+
+				<div class="blog">
+					<img src="assets\cog.png"></img>
+					<div>
+						<h1>Software Developer Intern at Iridian.</h1>
+						<h5>Refurbishing analytical software.</h5>
+					</div>
+					<p>Over the Summer of 2018, I was accepted as an intern at Iridian Spectral Technologies, a thin film filter manufacturer based in Ottawa. I was tasked with rebuilding an old piece of software that was becoming outdated and slow. The project was really fun because I was allowed full creative control over software so long as it was functional. I worked in C# and Visual Studio which made it feel very similar to web development. Real time feedback from users at the company as well as the scope of the project forced me to design software with good principles. </p>
+				</div>
+
+				<div class="blog">
+					<img src="assets\cog.png"></img>
+					<div>
+						<h1>Tech and Tools Summer Camp</h1>
+						<h5>Teaching youths about tech.</h5>
+					</div>
+					<p>I volunteered for a few weeks at a summer internship program offered by my High School. I was really inspired to pursue Computer Science after my experiences at the camp. Some of the kids there were really proficient at coding the little arduino motors they were given, and what was more was that they were actually enjoying it. I thought the idea of learning CS and being able to share what I know to others would be so satisfying, especially as job. I could tell that this was the future.</p>
+				</div>
+			</div>
+
+
+			
+			<div  class="row" id="movies">
+				<div class="title_br" >
+					<h1>Favorite Movies</h1>
+				</div>
+				<div class="moviePics">
+				  <div class="imagebox">
+				    <img src="assets/Movie1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"/>
+				  </div>
+				  <div class="imagebox">
+				    <img src="assets/Movie2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
+				  </div>
+				</div>
+
+				
+			</div>
+		
+			<footer class="contact" id="contact_me">
+				<div class="title_br">
+							<h1>Contact Me</h1>
+				</div>
+				<div class="icons">
+					<div>
+						<a href="https://www.facebook.com/fred.lepage.18?ref=bookmarks"><img src="assets\facebook.png"></img></a>
+					</div>
+					<div>
+						<a href="https://github.com/freddypage"><img src="assets\github.png"></img></a>
+					</div>
+					<div>
+						<a href="https://www.linkedin.com/in/fred-lepage-561097135/"><img src="assets\linkedin.png"></img></a>
+					</div>
+					<div>
+						<a href="#contact" onclick="getAddress()"><img src="assets\gmail.png"></img></a>
+						<input id="gmailaddy" onclick="this.select();" style="display:none;" value="fredlepage782@gmail.com" readonly></input>
+					</div>
+					
+				</div>
+			</footer>
+
+		</div>
+
+  </body>
+</html>

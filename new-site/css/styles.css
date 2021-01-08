@@ -1,0 +1,313 @@
+
+
+#title {
+    background-color: #59C38A;
+    color: white;
+    z-index: 0;
+}
+
+h1 {
+    font-family : 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+.container-fluid {
+    padding: 3% 10% 7%;
+    /*  top left-right bottom */
+    /* top right bottom left */
+}
+
+.container-nav
+{
+    padding: 3% 10% 3%;
+}
+
+.container-sub {
+    padding: 0% 10% 0%;
+    /*  top left-right bottom */
+    /* top right bottom left */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    
+}
+
+/* Navigation Bar */
+
+.navbar {
+    padding: 0 0 0.5rem;
+    position: relative;
+}
+
+.navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+}
+
+.nav-item {
+    padding: 0 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+
+/*Download Buttons*/
+.download-button {
+    margin: 5% 3% 5% 0;
+}
+
+/*About*/
+
+/* Shapes */
+.trapezium {
+    border-bottom: 30px solid #61695856;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 250px;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    /*(first value applies to top-left corner,
+     second value applies to top-right corner, third value applies to bottom-right corner, and fourth value applies to bottom-left corner)*/
+  }
+
+  .trapezium {
+    position:relative;
+}
+.trapezium:after {
+    content:' ';
+    left:-14px;
+    top:-10px;
+    position:absolute;
+    border-radius:40px 0 0 0;
+    width:164px;
+    height:40px;
+    display:block;
+}
+.skills {
+    font-size: 0.95 rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.skill {
+    margin-right: 10px;
+}
+
+.tech-skills {
+    font-size: 1.2rem;
+    margin-bottom: 1%;
+    padding: 3%;
+    background-color: #6169582c;
+    border-radius: 0 20px 0px 20px;
+}
+
+.badge-danger {
+    background-color: #59C38A;
+}
+
+.badge-primary {
+    background-color: #A89A4C;
+    color: white;
+}
+
+
+
+/*Title Image*/
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.title-image {
+    text-align: center;
+}
+
+.rotated {
+    transform: rotate(25deg);
+}
+
+
+@media (max-width:1028px) {
+    #title {
+        text-align: center;
+    }
+
+    .title-image {
+        position: static;
+        transform: rotate(0deg);
+    }
+}
+
+/*Experience*/
+.experience-image {
+    width: 50%;
+    height: auto;
+}
+
+.section-header
+{
+    background-color: #59C38A;
+    color: white;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.job-experience:nth-child(2n+1)
+{
+    background-color: #59c38a6e;
+    margin-left: 0;
+}
+
+.job-experience div 
+{
+    padding-top: 50px;
+}
+
+.exp-header
+{
+    margin-bottom: 10px;
+    padding-bottom: 0;
+}
+.exp-info-text
+{
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.exp-desc
+{
+    color: rgb(70, 69, 69);
+}
+
+/* Education */
+.education{
+
+}
+
+.education > img {
+    height: 200px;
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*Features*/
+
+#features {
+    z-index: 2;
+    background-color: #fff;
+    position: relative;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 7% 5%;
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    color: #ef8172;
+    padding-bottom: 10px;
+}
+
+.feature-icon:hover {
+    color: #ff4c68;
+}
+
+h3 {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+p {
+    color: #8f8f8f;
+}
+
+/*Testimonial Section*/
+#testimonials {
+    text-align: center;
+    background-color: #ef8172;
+    color: #fff;
+}
+
+h2 {
+    font-family: "Montserrat";
+    font-weight: bold;
+    line-height: 1;
+    font-size: 2rem;
+    padding-bottom: 3%;
+}
+
+.testimonial-image {
+    width: 100%;
+    border-radius: 10%;
+}
+
+#press {
+    background-color: #ef8172;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.press-logo {
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+
+.carousel-item {
+    padding: 7% 15%;
+    height: 700px;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+
+
+#cta {
+    background-color: #ff4c68;
+    color: white;
+    z-index: 0;
+}
+
+.cta-inner {
+    padding: 7% 15%;
+    align-items: center;
+    text-align: center;
+}
+
+/*footer*/
+#footer {
+    text-align: center;
+    
+}
+
+.footer-icon {
+    padding-right: 20px;
+    background-color: transparent;
+    color: #59C38A;
+}
+
+.footer-icons {
+    margin-top: 20px;
+    padding-bottom: 20px;
+   
+    
+}

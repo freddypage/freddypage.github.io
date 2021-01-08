@@ -1,214 +1,341 @@
-<!doctype html>
-<html lang="en-US">
-  <head>
-  	<title>Frederick Lepage</title>
-	<link rel="stylesheet" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<title>Fred Lepage</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/assets/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-	<script>
-		$(document).ready(function(){
-		  // Add smooth scrolling to all links
-		  $("a").on('click', function(event) {
+	<!-- Style Sheets -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
 
-		    // Make sure this.hash has a value before overriding default behavior
-		    if (this.hash !== "") {
-		      // Prevent default anchor click behavior
-		      event.preventDefault();
+	<!-- Place your kit's code here -->
+	<script src="https://kit.fontawesome.com/1675b686ce.js" crossorigin="anonymous"></script>
 
-		      // Store hash
-		      var hash = this.hash;
-
-		      // Using jQuery's animate() method to add smooth page scroll
-		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-		      $('html, body').animate({
-		        scrollTop: $(hash).offset().top
-		      }, 400, function(){
-
-		        // Add hash (#) to URL when done scrolling (default click behavior)
-		        window.location.hash = hash;
-		      });
-		    } // End if
-		  });
-		});
-
-		function getAddress() 
-		{
-			var x = document.getElementById("gmailaddy");
-
-			if (x.style.display === "none") {
-				x.style.display = "block";
-			} 
-			else {
-				x.style.display = "none";
-			}
-		}
-
-		// Open the Modal
-		function openModal() {
-		  document.getElementById('myModal').style.display = "block";
-		}
-
-		// Close the Modal
-		function closeModal() {
-		  document.getElementById('myModal').style.display = "none";
-		}
-	</script>
-
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
-  </head>
-  
-  <body> 
-  	
+ 
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
-	<navbar class="nav">
-		<ul>
-			<li><a href="#about_me">About Me</a></li>
-			<li><a href="#jobs">Work & Projects</a></li>
-			<li><a href="#movies">Movies List</a></li>
-			<li><a href="#contact_me">Contact</a></li>
-		</ul>
-	</navbar>
+<head>
 
-	
+</head>
 
-	
-		<div class="portrait">
-			<div class="name">
-				<h1>Frederick LePage</h1>
-				<p>Computer Science Student at McGill</p>
-			</div>
-		</div>
+<body>
+	<section id="title">
+		<div class="container-nav">
+	      <!-- Nav Bar -->
+	      	<nav class="navbar navbar-expand-lg navbar-dark">  
+                <a class="navbar-brand d-none d-sm-block d-md-none" href="">FL</a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+		        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+		            <ul class="navbar-nav ml-auto mr-auto">
+		                <li class="nav-item ">
+		                    <a class="nav-link" href="#about">About</a>
+		                </li>
+		                <li class="nav-item">
+		                    <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="d-sm-none d-md-block">
+                            <a class="navbar-brand" href="">FL</a>
+                        </li>
+		                <li class="nav-item">
+		                    <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+		                    <a class="nav-link" href="#contact">Contact</a>
+		                </li>
+		            </ul>
+		        </div>   
+	      	</nav>
+	 	</div>
 
-		<div class="mainbody">
-			<div id="about_me" class="about">
-					<div class="picture">
-						<div class="title_br">
-							<h1>About Me</h1>
-						</div>
-						<img src="assets\HeadshotCircle.png"></img></div>
-					<div class="bio">
-							<p>Hello! My name is Frederick Lepage and I am a undergraduate in Computer Science set to graduate in 2020. 
-							I thoroughly enjoy coding, whether it be for work or personal projects. My main areas of expertise are front-end development
-							and databases, but Programming is a dynamic field and I love learning about all sorts of different fields and picking 
-							them up myself. Some fun facts about me: I'm trilingual (French, English and Swedish), I love to cook everything delicious 
-							in this world, I consume copious (but warranted) amounts of telivision. I'm also commited to running and any kind of sport 
-							that gets my heart pumping and my ambitions rising.</p>
-						</div>
-			</div>
-
-			<div id="jobs">
-				<div class="title_br">
-					<h1>Work & Projects</h1>
-				</div>
-
-				<div class="blog">
-					<img src="assets\cog.png"></img>
-					<div>
-						<h1>Software Developer at Maya HTT</h1>
-						<h5></h5>
-					</div>
-					<p>I had the pleasure of working with some of the best industry professionals I've met in Montreal. My internship at Maya taught 
-					me some essential facts about the relationship between clients and coders in software. Working on a larger team also motivated 
-					my appreciation for collaboration. Bouncing around ideas and solutions with colleagues influenced fantastic ideas, and working 
-					with a large codebase with many cool inhouse technologies was a lot of fun. </p>
-				</div>
+	 	<!-- Title -->
 
 
-				<div class="blog">
-					<img src="assets\cog.png"></img>
-					<div>
-						<h1>Eat Smart!</h1>
-						<h5>A MEAN stack web app.</h5>
-					</div>
-					<p>Eat Smart is a full stack web app developed by me and three other team mates. The idea was to make an application that could help you better spend your money on tight budget, whether at home, or out looking for a meal at restaurant. The app was built to help learn the in's and out's of web development. 
-					The project tested everything we knew, but became a labour of love
-					that eventually grew into something we might use in our daily lives if we had a few spare dollars for maintenance. I personally developed the backend of the app, working with MongoDB, Espress and Node.js to handle
-					API calls to the server.</p>
-				</div>
+	</section>
 
-				<div class="blog">
-					<img src="assets\cog.png"></img>
-					<div>
-						<h1>Software Developer Intern at Iridian.</h1>
-						<h5>Refurbishing analytical software.</h5>
-					</div>
-					<p>Over the Summer of 2018, I was accepted as an intern at Iridian Spectral Technologies, a thin film filter manufacturer based in Ottawa. I was tasked with rebuilding an old piece of software that was becoming outdated and slow. The project was really fun because I was allowed full creative control over software so long as it was functional. I worked in C# and Visual Studio which made it feel very similar to web development. Real time feedback from users at the company as well as the scope of the project forced me to design software with good principles. </p>
-				</div>
+	<section id="about">
 
-				<div class="blog">
-					<img src="assets\cog.png"></img>
-					<div>
-						<h1>Tech and Tools Summer Camp</h1>
-						<h5>Teaching youths about tech.</h5>
-					</div>
-					<p>I volunteered for a few weeks at a summer internship program offered by my High School. I was really inspired to pursue Computer Science after my experiences at the camp. Some of the kids there were really proficient at coding the little arduino motors they were given, and what was more was that they were actually enjoying it. I thought the idea of learning CS and being able to share what I know to others would be so satisfying, especially as job. I could tell that this was the future.</p>
-				</div>
+		<div class="row container-fluid">
+			<div class="col-lg-4 col-sm-12">
+                <img src="assets/circle-cropped.png" alt="iphone-mockup" class="center">   
 			</div>
 
+			<div class="col-lg-8 col-sm-12">
+                <h1>About me</h1>
+                <p>Hi! My name is Frederick Lepage. I am a recent grad in Computer Science from Mcgill University. I've worked extensively with web facing applications 
+                    of all kinds. The internet is a fascinating place that has a lot of potential for good, and I work hard to create digital media 
+                    and tools that bolster this camp. I've familiarized myself with a large array of technologies and languages over the years, but 
+                    I'd say that I excel in object oriented programming (C#, Java) and Javascript (that can sometimes be OOP). I am also a part time 
+                    video editor and video game developer. I am currently available for both freelance and part time work, and if any of this interests 
+                    you, my contact information is below.
+                </p>
+            </div>
 
-			
-			<div  class="row" id="movies">
-				<div class="title_br" >
-					<h1>Favorite Movies</h1>
-				</div>
-				<div class="moviePics">
-				  <div class="imagebox">
-				    <img src="assets/Movie1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"/>
-				  </div>
-				  <div class="imagebox">
-				    <img src="assets/Movie2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"/>
-				  </div>
-				</div>
+            
+            
 
-				
+            <div >
+                <div class="col-lg-12 col-sm-12 text-center" style="margin-top: 2%;">
+                    <div class="trapezium" style="font-family : 'Montserrat', sans-serif;">Programming Skills</div>
+                </div>
+                <div class="col-lg-12 col-sm-12 text-center" style="margin-bottom: 20px;">
+                    <p class="tech-skills">
+                        <span class="badge badge-pill badge-primary skill">Javascript</span>
+                        <span class="badge badge-pill badge-primary skill">C#</span>
+                        <span class="badge badge-pill badge-primary skill">Java</span> 
+                        <span class="badge badge-pill badge-primary skill">SQL</span>
+                        <span class="badge badge-pill badge-primary skill">Node</span>
+                        <span class="badge badge-pill badge-primary skill">React</span>
+                        <span class="badge badge-pill badge-primary skill">Angular</span>
+                        <span class="badge badge-pill badge-primary skill">HTML</span>
+                        <span class="badge badge-pill badge-primary skill">Git</span>
+                        <span class="badge badge-pill badge-primary skill">Python</span>
+                        <span class="badge badge-pill badge-primary skill">OCaml</span>
+                        <span class="badge badge-pill badge-primary skill">C++</span>
+                        <span class="badge badge-pill badge-primary skill">CSS</span>
+                        <span class="badge badge-pill badge-primary skill">Typescript</span>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-lg-12 row" style="margin-bottom: 2%; margin-top: 4%;">
+                <div class="col-lg-4 col-sm-12">
+                    <p class="skills"><b style="color: rgb(58, 57, 57);">Skills: </b> Video Editing, Technology</p>
+                </div>
+                <div class="col-lg-4 col-sm-12 ">
+                    <p class="skills"><b style="color: rgb(58, 57, 57);">Hobbies: </b> Running, Cooking</p>
+                </div>
+                <div class="col-lg-4 col-sm-12 ">
+                    <p class="skills"><b style="color: rgb(58, 57, 57);">Languages: </b> English, French, Swedish </p>
+                </div>
+            </div>
+            
+        </div>
+
+        
+    </section>
+
+    <section id="experience">
+        <div class="row container-fluid section-header justify-content-center" style="padding-top: 7%;">
+            <h1>Experience</h1>
+        </div>
+        <div class = "row container-fluid job-experience">
+            <div class="col-lg-4 col-sm-12">
+                <img src="assets/maya-removebg-preview.png" alt="iphone-mockup" class="experience-image center">   
 			</div>
-		
-			<footer class="contact" id="contact_me">
-				<div class="title_br">
-							<h1>Contact Me</h1>
-				</div>
-				<div class="icons">
-					<div>
-						<a href="https://www.facebook.com/fred.lepage.18?ref=bookmarks"><img src="assets\facebook.png"></img></a>
-					</div>
-					<div>
-						<a href="https://github.com/freddypage"><img src="assets\github.png"></img></a>
-					</div>
-					<div>
-						<a href="https://www.linkedin.com/in/fred-lepage-561097135/"><img src="assets\linkedin.png"></img></a>
-					</div>
-					<div>
-						<a href="#contact" onclick="getAddress()"><img src="assets\gmail.png"></img></a>
-						<input id="gmailaddy" onclick="this.select();" style="display:none;" value="fredlepage782@gmail.com" readonly></input>
-					</div>
-					
-				</div>
-			</footer>
 
-		</div>
+			<div class="col-lg-8 col-sm-12">
+                <h2 class="exp-header">Summer Customization Software Developer</h2>
+                <p class="exp-info-text">May 2019 - August 2019   ✦    Montreal, QC    ✦    Maya Heat Transfer Technologies</p>
+                <p class="exp-desc">Developed code and diligently fixed bugs in a team for several clients. Learned professional standards
+                     in software development including version control, AGILE and unit testing. Helped conceptualize a request for a new feature
+                      in the application. Improved skills in javascript, full stack development and databases.
+                </p>
+			</div>
+        </div>
 
-  </body>
+        <div class = "row container-fluid job-experience">
+            
+            <div class="col-lg-4 col-sm-12">
+                <img src="assets/iridian-removebg-preview.png" alt="iphone-mockup" class ="experience-image center">   
+            </div>
+            
+			<div class="col-lg-8 col-sm-12">
+                <h2 class="exp-header">Summer Software Engineer</h2>
+                <p class="exp-info-text">May 2018 - August 2019   ✦    Ottawa, QC    ✦    Iridian Spectral Technologies</p>
+                <p class="exp-desc">Developed internal software . Worked in C# and XAML. 
+                    Created a customizable service which allowed technicians and employees to respond to real time data as well as observe archived data.
+                     Designed an interface which improved workflow by providing communication tools. 
+                    Learned Front-end Design principles when designing a responsive interface for users.
+                </p>
+			</div>
+        </div>
+
+        <div class = "row container-fluid job-experience">
+            
+            <div class="col-lg-4 col-sm-12">
+                <img src="assets/iridian-removebg-preview.png" alt="iphone-mockup" class ="experience-image center">   
+            </div>
+            
+			<div class="col-lg-8 col-sm-12">
+                <h2 class="exp-header">Lens Technician</h2>
+                <p class="exp-info-text">May 2018 - August 2018   ✦    Ottawa, ON    ✦    Iridian Spectral Technologies</p>
+                <p class="exp-desc">Developed code and diligently fixed bugs in a team for several clients. Learned professional standards
+                     in software development including version control, AGILE and unit testing. Helped conceptualize a request for a new feature
+                      in the application. Improved skills in javascript, full stack development and databases.
+                </p>
+			</div>
+        </div>
+
+        <div class = "row container-fluid job-experience">
+            
+            <div class="col-lg-4 col-sm-12">
+                <img src="assets/ashbury-removebg-preview.png" alt="iphone-mockup" class ="experience-image center">   
+            </div>
+            
+			<div class="col-lg-8 col-sm-12">
+                <h2 class="exp-header">Summer Software Engineer</h2>
+                <p class="exp-info-text">June 2015 - July 2015   ✦    Ottawa, ON    ✦    Ashbury College</p>
+                <p class="exp-desc">Volunteered for a camp that taught children how to program and woodwork. 
+                    Organized and lead activities for campers. Guided participants through coding and interaction with Arduinos. 
+                    Helped spark interest in tech for elementary school kids.
+                </p>
+			</div>
+        </div>
+        
+    </section>
+
+    <section id="education">
+        <div class="row container-fluid section-header justify-content-center" style="padding-top: 7%;">
+            <h1>Education</h1>
+        </div>
+        <div class="row container-fluid">
+            <div class="card col-lg-5 col-sm-12 education  ml-auto mr-auto">
+                <img class="card-img-top ml-auto mr-auto" src="assets/mcgill.png" alt="Mcgill"  style="width: 150px;">
+                <div class="card-body">
+                    <h2>Mcgill Univeristy<h2>
+                    <h3>BA in Computer Science</h3>
+                    <p>Sep 2017 - May 2020</p>
+                    <p>Minor in History</p>
+                </div>
+            </div>
+
+            <div class="card col-lg-5 col-sm-12 education ml-auto mr-auto" style="height: 50%;">
+                <img class="card-img-top ml-auto mr-auto" src="assets/ashbury.jpg" alt="Mcgill">
+                <div class="card-body">
+                    <h2>Ashbury College<h2>
+                    <h3>Bilingual IB diploma</h3>
+                    <p>January 2013 - May 2017</p>
+                    <p>English and French certification</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="row container-fluid section-header justify-content-center" style="padding-top: 7%;">
+            <div class="col-lg-12">
+                <h1 style="text-align: center;">Projects</h1>
+            </div>
+            <div id="testimonial-carousel" class="col-lg-12 carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active container col-lg-12">
+                        <div class="row">
+                            <div class="col-4 align-middle">
+                                <span class="helper"></span><img class="testimonial-image" src="assets/purgatory-cory.png" alt="dog-profile">
+                            </div>
+                            <div class="col-8">
+                                <h2>Purgatory Cory</h2>
+                                <em>Collaborated with 5 others on a Game Jam where we had 48 hours to design and program a game. We used a Javascript 
+                                    Game Engine called Hexi. We slept very little and had a lot of fun. The game was hosted on itch.io using Node.js. WARNING: themes of violence (13+).
+                                </em>
+                                <div style="width: 100%; margin-top: 20px;">
+                                    <a href="https://quite-good.itch.io/purgatorycory" type="button" class="btn btn-danger">See Project</a>
+                                </div>
+                                <div style="width: 100%; margin-top: 20px;">
+                                    <a href="https://github.com/julienmcollins/DiscordGameJame5" type="button" class="btn btn-info">See Repo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          
+                  <div class="carousel-item container  col-lg-12">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="testimonial-image" src="assets/word-search.jpg" alt="dog-profile">
+                            </div>
+                            <div class="col-8">
+                                <h2>Word Search Game</h2>
+                                <em>Created a Word Search Game in React Native as part of a Shopify Challenge. Developed several classes, controllers, and ui elements 
+                                    using javascript. Can be deployed on both IOS and Android devices using Expo (React Native converts JS to mobile native language). The 
+                                    Game generates a random map of words. The player must find all words that are described in the word bank to win!
+                                </em>
+                                <div style="width: 100%; margin-top: 20px;">
+                                    <a href="https://github.com/freddypage/WordSearch" type="button" class="btn btn-info">See Repo</a>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+
+                    <div class="carousel-item container  col-lg-12">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="testimonial-image" src="assets/MovieAPI.jpg" alt="dog-profile">
+                            </div>
+                            <div class="col-8">
+                                <h2>Movie API Frontend</h2>
+                                <em>Created a frontend application in React Native for a Movie Database API. The app pulled the latest and trending movies 
+                                    and displayed them in a gallery. Utilized numerous get requests, state changes, controllers and views.
+                                </em>
+                                <div style="width: 100%; margin-top: 20px;">
+                                    <a href="https://github.com/freddypage/SyntronicChallenge" type="button" class="btn btn-info">See Repo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item container  col-lg-12">
+                        <div class="row">
+                            <div class="col-4">
+                                <span class="helper"></span><img class="testimonial-image" src="assets/eat-smart.png" alt="dog-profile">
+                            </div>
+                            <div class="col-8">
+                                <h2>Eat Smart</h2>
+                                <em>Collaborated with three others on a full stack application utilizing a React frontend, and a Node, Express and MongoDB backend. 
+                                    Helped organize the project and develop code on both ends. The application has a user database and utilizes multiple API. It 
+                                    provides consumers with cost efficient ways to make a meal at home depending whats in their fridge/pantry, or find a restaurant 
+                                    within a certain budget (google maps API and Zomato). The project took several days to complete. It is hosted on Heroku but I suggest 
+                                    using FAKE user login info because the security API we used is not the greatest.
+                                </em>
+                                <div style="width: 100%; margin-top: 20px;">
+                                    <a href="https://smeart.herokuapp.com/" type="button" class="btn btn-danger">See Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          
+                  <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+          
+                </div>
+          
+              </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+  <footer id="footer">
+
+    <div id="contact" class="row container-fluid section-header justify-content-center" style="padding-top: 7%; background-color: white; color: #59C38A;">
+        <div class="col-lg-12">
+            <h1>Contact Me</h1>
+        </div>
+        <div class="footer-icons col-lg-12">
+            <a href="https://github.com/freddypage" data-toggle="tooltip" data-placement="top" title="Github"><i class="footer-icon fab fa-github fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/fred-lepage-561097135/" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="footer-icon fab fa-linkedin fa-2x"></i></a>
+            <a href="mailto:fredlepage782@gmail.com" data-toggle="tooltip" data-placement="top" title="Mail"><i class="footer-icon fas fa-envelope fa-2x"></i></a>
+          </div>
+    </div>
+
+    
+  </footer>
+
+
+
+</body>
+
 </html>
